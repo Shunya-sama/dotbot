@@ -115,7 +115,7 @@ def main():
         if success:
             log.info('\n==> All tasks executed successfully')
         else:
-            raise DispatchError('\n==> Some tasks were not executed successfully')
+            log.error('\n==> Some tasks were not executed successfully')
     except (ReadingError, DispatchError) as e:
         log.error('%s' % e)
         exit(1)
